@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Train Schedule Database</title>
+
+</head>
+
+<body>
+
+
+	<div class="container">
+	<div class="jumbotron">
+		<h1>Train Schedule Database</h1>
+	</div>
+	</div>
+
+
+	<div class="container">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Train Schedule Database</div>
+			<div class="panel-body">
+				<table id="trainTable" class="table" >
+		        	<thead>
+			        <tr>
+			            <th>Train Name</th>
+				        <th>Destination</th>
+				        <th>Departure Frequency</th>
+				        <th>Next Arrival</th>
+				        <th>Minutes Away</th>
+		       		</tr>
+		        	</thead>
+		        <tbody>
+					<!-- Information from Firebase will be dynamically populated here -->
+		        </tbody>
+		    	</table>
+			</div>
+	</div>
+	</div>		
+	
+
+	<div class="container">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Please input train information below:</div>
+		<div class="panel-body">
+			<form>
+			<!-- Reminder to add input validation states -->
+	            <div class="form-group">
+	                <label for="trainName">Train Name</label>
+	                <input type="text" class="form-control" id="trainName" placeholder="Train Name">
+	            </div>
+	            <div class="form-group">
+	                <label for="trainDestination">Destination</label>
+	                <input type="text" class="form-control" id="trainDestination" placeholder="Final Destination">
+	            </div>
+	            <div class="form-group">
+	                <label for="trainTime">Initial Train Departure Time</label>
+	                <input type="text" class="form-control" id="trainTime" placeholder="Military Time - 00:00:00">
+	            </div>
+	            <div class="form-group">
+	                <label for="trainDeparture">Departure Frequency</label>
+	                <input type="number" class="form-control" id="trainDeparture" placeholder="Departure Frequency (in Minutes)">
+	            </div>
+				<button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+	</div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+	<script src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
